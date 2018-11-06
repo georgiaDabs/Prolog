@@ -4,11 +4,11 @@ male(vernon).
 male(james).
 male(paul).
 male(albert).
+male(bob).
 female(ruth).
 female(helen).
 female(petunia).
 female(lili).
-male(bob).
 female(bertha).
 female(brenda).
 parent_of(bob,paul).
@@ -56,3 +56,5 @@ ancestor_of(X,Y):-
 ancestor_of(X,Y):-
 	parent_of(X,Z),
 	ancestor_of(Z,Y).
+not_parent(X,Y):-
+	not(parent_of(X,Y)).
